@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "remixicon/fonts/remixicon.css";
 import Head from "next/head";
 import Header from "../components/header";
 
