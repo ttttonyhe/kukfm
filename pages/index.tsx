@@ -1,9 +1,9 @@
 export default function Home() {
   return (
-    <div className="text-gray-700 max-w-4xl mx-auto">
+    <div className="text-gray-700 xl:w-4xl mx-auto w-full">
       <main className="my-10">
-        <section className="flex justify-center space-x-6">
-          <summary className="bg-white shadow-sm border rounded-xl justify-center items-center p-6 text-center">
+        <section className="xl:flex justify-center space-x-6">
+          <summary className="max-w-2xl bg-white shadow-sm border rounded-xl justify-center items-center p-6 text-center">
             <img
               className="h-40 w-40 mx-auto rounded-xl mb-4"
               src="https://static.ouorz.com/wp-content/uploads/2020/12/2021010105320083.jpg"
@@ -13,7 +13,7 @@ export default function Home() {
             </h1>
             <p className="text-lg text-gray-500 tracking-wide">已知未知播客</p>
           </summary>
-          <article className="bg-white shadow-sm border rounded-xl px-9 py-5 items-center flex">
+          <article className="max-w-2xl bg-white shadow-sm border rounded-xl px-9 py-5 items-center flex">
             <div>
               <div className="mb-8">
                 <h1 className="text-2xl font-medium mb-1">关于 About</h1>
@@ -21,7 +21,7 @@ export default function Home() {
                   已知未知是一档聚焦生活、科技与职业的非定期更新播客。信息过载的时代，我们从已知探索未知。
                 </p>
               </div>
-              <div className="flex space-x-2 whitespace-nowrap mb-3">
+              <div className="flex space-x-2 xl:whitespace-nowrap mb-3">
                 <button className="text-yellow-400 border-yellow-300 border shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
                   <i className="ri-rss-fill"></i>
                   <span>RSS</span>
@@ -39,7 +39,7 @@ export default function Home() {
                   <span>Apple Podcasts</span>
                 </button>
               </div>
-              <div className="flex space-x-2 whitespace-nowrap">
+              <div className="flex space-x-2 xl:whitespace-nowrap">
                 <button className="text-indigo-400 border-indigo-300 border shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
                   <i className="ri-globe-fill"></i>
                   <span>小宇宙</span>
@@ -52,7 +52,6 @@ export default function Home() {
             </div>
           </article>
         </section>
-        <section></section>
       </main>
       <footer className="text-center text-gray-500 font-light tracking-wide">
         <p>

@@ -17,3 +17,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+i {
+  transform: translateY(0.9px);
+}
+
+button {
+  @apply focus:outline-none hover:shadow-inner;
+}
