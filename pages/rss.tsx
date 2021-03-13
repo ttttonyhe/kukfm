@@ -1,7 +1,7 @@
 import { GetServerSideProps } from "next";
 import { FC } from "react";
 import Podcast from "podcast";
-import { escape } from "html-escaper";
+import { htmlToText } from "html-to-text";
 
 interface Post {
   status: string;
@@ -28,6 +28,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
       title: "已知未知 Known Unknowns",
       description:
         "已知未知是一档聚焦生活、科技与职业的非定期更新播客。信息过载的时代，我们从已知探索未知。",
+      generator: "Node.js",
       feed_url: "https://kukfm.com/rss",
       site_url: "http://kukfm.com",
       image_url: "https://static.ouorz.com/kuk_podcast_logo.jpg",
@@ -72,7 +73,9 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
             size: post.post_metas.podcast.fileSize,
           },
           itunesExplicit: false,
-          itunesSummary: escape(post.content.rendered),
+          itunesSummary: htmlToText(post.content.rendered, {
+            tags: { a: { options: { hideLinkHrefIfSameAsText: true } } },
+          }),
           itunesDuration: parseInt(post.post_metas.podcast.duration),
           itunesEpisode: parseInt(post.post_metas.podcast.episode),
           itunesEpisodeType: "full",
