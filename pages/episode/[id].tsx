@@ -8,7 +8,9 @@ export default function Episode({ episode }) {
   return (
     <div className="text-gray-700 xl:w-4xl mx-auto w-full">
       <Head>
-        <title>{episode.title.rendered}</title>
+        <title>
+          {episode.title.rendered} - 已知未知 Known Unknowns Podcast
+        </title>
       </Head>
       <main className="my-5 mx-5 lg:my-10 lg:flex lg:justify-center lg:space-x-6">
         <div>
@@ -25,10 +27,10 @@ export default function Episode({ episode }) {
           <section className="lg:flex justify-center mb-6">
             <article className="overflow-hidden lg:max-w-2xl bg-white shadow-sm border rounded-xl p-7 lg:px-10 lg:py-9 items-center flex">
               <div className="max-w-full">
+                <div className="bg-gray-50 rounded-md border px-3 inline-block mb-3 text-gray-500 mr-3 text-lg">
+                  EP{episode.post_metas.podcast.episode}
+                </div>
                 <h1 className="font-medium text-2xl lg:text-3xl mb-5 tracking-wide flex items-center cursor-pointer">
-                  <span className="bg-gray-50 rounded-md border px-2.5 text-gray-500 mr-3 text-lg">
-                    EP{episode.post_metas.podcast.episode}
-                  </span>
                   {episode.title.rendered}
                 </h1>
                 <div

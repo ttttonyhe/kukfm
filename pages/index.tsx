@@ -28,7 +28,7 @@ export default function Home({ episodes }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <button className="text-indigo-400 border-indigo-300 border shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
+                    <button className="text-indigo-400 border-indigo-300 w-full lg:w-auto border shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
                       <i className="ri-globe-fill"></i>
                       <span>小宇宙</span>
                     </button>
@@ -38,7 +38,7 @@ export default function Home({ episodes }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <button className="text-blue-400 border-blue-300 border shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
+                    <button className="text-blue-400 border-blue-300 border w-full lg:w-auto shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
                       <Image
                         src="https://static.ouorz.com/breaker_logo.png"
                         width="13"
@@ -53,7 +53,7 @@ export default function Home({ episodes }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <button className="text-gray-500 border-gray-400 border shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
+                    <button className="text-gray-500 border-gray-400 border w-full lg:w-auto shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
                       <i className="ri-apple-fill"></i>
                       <span>Apple Podcasts</span>
                     </button>
@@ -63,7 +63,7 @@ export default function Home({ episodes }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <button className="text-green-500 border-green-300 border shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
+                    <button className="text-green-500 border-green-300 border w-full lg:w-auto shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
                       <i className="ri-google-fill"></i>
                       <span>Google Podcasts</span>
                     </button>
@@ -75,7 +75,7 @@ export default function Home({ episodes }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <button className="text-yellow-500 border-yellow-400 border shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
+                    <button className="text-yellow-500 border-yellow-400 border w-full lg:w-auto shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
                       <Image
                         src="https://static.ouorz.com/castbox_logo.png"
                         width="13"
@@ -90,7 +90,7 @@ export default function Home({ episodes }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <button className="text-pink-500 border-pink-300 border shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
+                    <button className="text-pink-500 border-pink-300 border w-full lg:w-auto shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
                       <i className="ri-anchor-fill"></i>
                       <span>Anchor</span>
                     </button>
@@ -100,7 +100,7 @@ export default function Home({ episodes }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <button className="text-yellow-600 border-yellow-500 border shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
+                    <button className="text-yellow-600 border-yellow-500 border w-full lg:w-auto shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
                       <Image
                         src="https://static.ouorz.com/overcast_logo.png"
                         width="13"
@@ -115,7 +115,7 @@ export default function Home({ episodes }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <button className="text-red-400 border-red-300 border shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
+                    <button className="text-red-400 border-red-300 border shadow-sm w-full lg:w-auto rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
                       <Image
                         src="https://static.ouorz.com/pocketcasts_logo.png"
                         width="13"
@@ -132,7 +132,7 @@ export default function Home({ episodes }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <button className="text-red-500 border-red-400 border shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
+                    <button className="text-red-500 border-red-400 border w-full lg:w-auto shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
                       <Image
                         src="https://static.ouorz.com/radiopublic_logo.svg"
                         width="13"
@@ -147,7 +147,7 @@ export default function Home({ episodes }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <button className="text-green-500 border-green-400 border shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
+                    <button className="text-green-500 border-green-400 border w-full lg:w-auto shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
                       <i className="ri-spotify-line"></i>
                       <span>Spotify</span>
                     </button>
@@ -163,9 +163,12 @@ export default function Home({ episodes }) {
                   key={episode.id}
                   className="hover:shadow-md overflow-hidden mb-4 lg:max-w-2xl bg-white shadow-sm border rounded-xl p-7 lg:px-9 pt-9 pb-6 items-center"
                 >
+                  <div className="lg:hidden inline-block mb-3 bg-gray-50 rounded-md border px-3 text-gray-500 mr-3 text-lg">
+                    EP{episode.post_metas.podcast.episode}
+                  </div>
                   <Link href={`/episode/${episode.id}`}>
                     <h2 className="font-medium text-2xl mb-4 tracking-wide flex items-center cursor-pointer">
-                      <span className="bg-gray-50 rounded-md border px-2.5 text-gray-500 mr-3 text-lg">
+                      <span className="lg:block hidden bg-gray-50 rounded-md border px-2.5 text-gray-500 mr-3 text-lg">
                         EP{episode.post_metas.podcast.episode}
                       </span>
                       {episode.title.rendered}
