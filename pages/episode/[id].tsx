@@ -2,10 +2,14 @@ import { GetServerSideProps } from "next";
 import Aside from "../../components/Aside";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
+import Head from "next/head";
 
 export default function Episode({ episode }) {
   return (
     <div className="text-gray-700 xl:w-4xl mx-auto w-full">
+      <Head>
+        <title>{episode.title.rendered}</title>
+      </Head>
       <main className="my-5 mx-5 lg:my-10 lg:flex lg:justify-center lg:space-x-6">
         <div>
           <Aside />
