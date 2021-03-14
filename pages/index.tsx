@@ -152,6 +152,31 @@ export default function Home({ episodes }) {
                       <span>Spotify</span>
                     </button>
                   </a>
+                  <a
+                    href="https://music.163.com/#/djradio?id=796784079"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button className="text-red-600 border-red-500 border w-full lg:w-auto shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
+                      <i className="ri-netease-cloud-music-line"></i>
+                      <span>网易云音乐</span>
+                    </button>
+                  </a>
+                  <a
+                    href="https://www.ximalaya.com/gerenchengzhang/45246859"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button className="text-red-600 border-red-500 border w-full lg:w-auto shadow-sm rounded-md py-1 px-3.5 items-center justify-center flex space-x-1">
+                      <Image
+                        src="https://static.ouorz.com/ximalaya_logo.png"
+                        width="13"
+                        height="13"
+                        className="rounded-full"
+                      />
+                      <span>喜马拉雅</span>
+                    </button>
+                  </a>
                 </div>
               </div>
             </article>
