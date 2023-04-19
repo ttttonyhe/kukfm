@@ -1,6 +1,6 @@
 import { GetServerSideProps } from "next";
 import { FC } from "react";
-import { Podcast } from 'podcast';
+import { Podcast } from "podcast";
 import { htmlToText } from "html-to-text";
 
 interface Post {
