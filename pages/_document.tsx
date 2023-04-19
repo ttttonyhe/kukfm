@@ -15,11 +15,6 @@ class MyDocument extends Document {
     return (
       <Html lang="zh-cn">
         <Head>
-          <script
-            defer
-            src="https://www.ouorz.com/beacon.min.js"
-            data-cf-beacon='{"token": "424ccd0442964d6ba779ac54be63bc79", "spa": true}'
-          ></script>
           <meta name="robots" content="index,follow"></meta>
           <meta name="googlebot" content="index,follow"></meta>
           <meta name="twitter:card" content="summary_large_image"></meta>
