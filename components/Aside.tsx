@@ -23,11 +23,11 @@ export default function Aside() {
 					Home
 				</div>
 			</Link>
-			<Link href='/rss'>
+			<a target='_blank' href='/rss'>
 				<div className='text-gray-600 mt-3 mb-2 bg-white shadow-sm border rounded-xl tracking-wider justify-center items-center flex p-2 text-lg cursor-pointer hover:bg-gray-50'>
 					<i className='ri-rss-fill mr-1'></i> RSS
 				</div>
-			</Link>
+			</a>
 			<a href='mailto:hi@kukfm.com'>
 				<div className='text-gray-600 mt-3 mb-2 bg-white shadow-sm border rounded-xl tracking-wider justify-center items-center flex p-2 text-lg cursor-pointer hover:bg-gray-50'>
 					<i className='ri-mail-line mr-1'></i> Email
