@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import logo from "../static/kukfm_logo.jpg";
 
 export default function Aside() {
 	return (
@@ -7,10 +8,11 @@ export default function Aside() {
 			<summary className='mb-5 lg:mb-0 w-full bg-white shadow-sm border rounded-xl justify-center items-center p-6 py-8 text-center'>
 				<Image
 					className='mx-auto rounded-xl'
-					src='https://static.ouorz.com/wp-content/uploads/2020/12/2021010105320083.jpg'
+					src={logo}
 					width='170'
 					height='170'
 					alt='Known Unknowns'
+					placeholder='blur'
 				/>
 				<h1 className='mt-4 text-2xl font-medium whitespace-nowrap tracking-wide'>
 					Known Unknowns
@@ -33,7 +35,7 @@ export default function Aside() {
 					<i className='ri-mail-line mr-1'></i> Email
 				</div>
 			</a>
-			<a href='https://afdian.net/@kukfm' target='_blank' rel='noreferrer'>
+			<a href='https://www.ouorz.com/sponsor' target='_blank' rel='noreferrer'>
 				<div className='text-gray-600 mt-3 mb-6 lg:mb-2 bg-white shadow-sm border rounded-xl tracking-wider justify-center items-center flex p-2 text-lg cursor-pointer hover:bg-gray-50'>
 					<i className='ri-hand-heart-line mr-1'></i> Sponsor
 				</div>

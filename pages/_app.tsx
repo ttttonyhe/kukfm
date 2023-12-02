@@ -1,9 +1,9 @@
 import "../styles/globals.css";
 import "remixicon/fonts/remixicon.css";
 import Head from "next/head";
+import Script from "next/script";
 import Footer from "../components/Footer";
 import NextNprogress from "nextjs-progressbar";
-import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }) {
 	return (
@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
 				<link
 					rel='icon'
 					href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎙️</text></svg>'
-				></link>
+				/>
 			</Head>
 			<NextNprogress
 				color='#D1D5DB'
@@ -22,7 +22,14 @@ function MyApp({ Component, pageProps }) {
 			/>
 			<Component {...pageProps} />
 			<Footer />
-			<Analytics />
+			<Script
+				async
+				defer
+				data-do-not-track='true'
+				data-domains='www.ouorz.com'
+				data-website-id='35bd3542-5f84-4573-b77c-5eb02cf4cdca'
+				src='https://analytics.ouorz.com/analytics.js'
+			/>
 		</div>
 	);
 }
